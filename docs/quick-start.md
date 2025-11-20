@@ -8,13 +8,45 @@ keywords: [ReactAgent, 快速开始, Quick Start, Spring AI Alibaba, Agent Frame
 
 跟随快速开始，学习如何开发一个具备完整功能的 ReactAgent 智能体。
 
-## 前置条件
+## 快速启动一个ChatBot智能体
 
-### 环境要求
+社区在 <a href="https://github.com/alibaba/spring-ai-alibaba/tree/main/examples/chatbot" target="_blank">examples/chatbot</a>
+提供了一个可快速运行的 ChatBot 智能体示例，支持 Python 脚本、Shell脚本、查看本地文件等工具调用。
+
+### 前置条件
 
 * JDK 17+
 * Maven 3.8+
 * 选择你的 LLM 提供商并获取 API-KEY（如阿里云百炼的 DashScope）
+
+### 下载示例
+
+示例代码在 spring-ai-alibaba 主干仓库的 examples 目录下：
+
+```shell
+git clone https://github.com/alibaba/spring-ai-alibaba.git
+cd examples/chatbot
+```
+
+### 启动ChatBot智能体
+
+运行以下命令，启动智能体:
+
+```shell
+mvn spring-boot:run
+```
+
+### 与智能体聊天（测试智能体）
+
+示例启动后，在 Console 输出栏可以看到一条 UI 地址打印出来：http://localhost:8080/chatui/index.html
+
+<img src="/img/agent/agents/chatbot-log.png" alt="chatbot-log" width="360" />
+
+点击打开浏览器页面即可与智能体聊天了，可以看到详细的工具调用、推理过程：
+
+![agent-chat-ui](/img/agent/agents/chatbot-agent-chat-ui.gif)
+
+## 上手开发自己的智能体
 
 ### 添加依赖
 
@@ -35,6 +67,21 @@ keywords: [ReactAgent, 快速开始, Quick Start, Spring AI Alibaba, Agent Frame
     <artifactId>spring-ai-alibaba-starter-dashscope</artifactId>
     <version>1.1.0.0-M5</version>
   </dependency>
+
+ <!-- 【可选】OpenAi ChatModel 支持（如果使用其他模型，请参考文档选择对应的 starter） -->
+ <!--
+  <dependency>
+    <groupId>org.springframework.ai</groupId>
+    <artifactId>spring-ai-starter-model-openai</artifactId>
+    <version>1.1.0-M4</version>
+  </dependency>
+ -->
+  <!-- 【可选】为智能体原生增加 Chat UI 支持-->
+   <dependency>
+     <groupId>com.alibaba.cloud.ai</groupId>
+     <artifactId>spring-ai-alibaba-studio</artifactId>
+     <version>1.1.0.0-M5</version>
+   </dependency>
 </dependencies>
 ```
 

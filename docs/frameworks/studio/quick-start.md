@@ -6,40 +6,51 @@ keywords: [Studio, Agent Chat, UI, Spring AI Alibaba]
 
 # 快速开始
 
-Agent Chat UI provides a visualized way for developers to chat with any Spring AI Alibaba developed Agents.
+Agent Chat UI 为开发者提供了一种可视化的方式，可以与任何 Spring AI Alibaba 开发的 Agent 进行聊天。
 
 ![Agent Chat UI](/img/chatui/agent-chat-ui.gif)
 
-## Quick Experience
+## 快速体验
 
-1. Down Example
+社区在 <a href="https://github.com/alibaba/spring-ai-alibaba/tree/main/examples/chatbot" target="_blank">examples/chatbot</a>
+提供了一个可快速运行的 ChatBot 智能体示例，支持 Python 脚本、Shell脚本、查看本地文件等工具调用。
+
+### 前置条件
+
+* JDK 17+
+* Maven 3.8+
+* 选择你的 LLM 提供商并获取 API-KEY（如阿里云百炼的 DashScope）
+
+### 下载示例
+
+示例代码在 spring-ai-alibaba 主干仓库的 examples 目录下：
 
 ```shell
 git clone https://github.com/alibaba/spring-ai-alibaba.git
-
-cd examples/deepresearch
+cd examples/chatbot
 ```
 
-2. Start agent
+### 启动ChatBot智能体
+
+运行以下命令，启动智能体:
 
 ```shell
-export AI_DASHSCOPE_API_KEY=your_dashscope_api_key
-export JINA_API_KEY=your_jina_api_key  # Optional
-
 mvn spring-boot:run
 ```
 
-3. Chat with agent
+### 与智能体聊天（测试智能体）
 
-Visit `http://localhost:3000`.
+示例启动后，打开浏览器访问 http://localhost:8080/chatui/index.html 页面即可与智能体聊天了，可以看到详细的工具调用、推理过程：
 
-## How Agent Chat UI Works
+![agent-chat-ui](/img/agent/agents/chatbot-agent-chat-ui.gif)
 
-### Embedded mode
+## Agent Chat UI 工作原理
 
-The ui can work in a embedded mode with any of your Spring Boot applications.
+### 嵌入式模式
 
-Just add the following dependency to your agent project:
+UI 可以在嵌入式模式下与任何 Spring Boot 应用程序一起工作。
+
+只需在您的 agent 项目中添加以下依赖：
 
 ```xml
 <dependency>
@@ -49,11 +60,11 @@ Just add the following dependency to your agent project:
 </dependency>
 ```
 
-Run your agent, visit `http:localhost:{your-port}/chatui/index.html`, and now you can chat with you agent.
+运行您的 agent，访问 `http:localhost:{your-port}/chatui/index.html`，现在您就可以与您的 agent 聊天了。
 
-### Standalone mode
+### 独立模式
 
-First, clone the repository,
+首先，克隆仓库，
 
 ```bash
 git clone https://github.com/alibaba/spring-ai-alibaba.git
@@ -61,7 +72,7 @@ git clone https://github.com/alibaba/spring-ai-alibaba.git
 cd spring-ai-alibaba/spring-ai-alibaba-studio/agent-chat-ui
 ```
 
-Install dependencies:
+安装依赖：
 
 ```bash
 pnpm install
@@ -69,7 +80,7 @@ pnpm install
 # npm install
 ```
 
-Run the app:
+运行应用：
 
 ```bash
 pnpm dev
@@ -77,9 +88,9 @@ pnpm dev
 # npm run dev
 ```
 
-The app will be available at `http://localhost:3000`.
+应用将在 `http://localhost:3000` 可用。
 
-By default, the UI connects to your backend Agent at `http://localhost:8080`, you can change the address at `.env.development` file.
+默认情况下，UI 连接到您的后端 Agent，地址为 `http://localhost:8080`，您可以在 `.env.development` 文件中更改地址。
 
 ```properties
 # .env.development
