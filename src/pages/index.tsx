@@ -142,7 +142,7 @@ function HomepageHeader() {
                 <svg className={styles.labelIcon} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M20,2H4C2.9,2,2,2.9,2,4v16c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V4C22,2.9,21.1,2,20,2z M8.5,15L8.5,15 c-0.83,0-1.5-0.67-1.5-1.5v-3C7,9.67,7.67,9,8.5,9l0,0C9.33,9,10,9.67,10,10.5v3C10,14.33,9.33,15,8.5,15z M15.5,15L15.5,15 c-0.83,0-1.5-0.67-1.5-1.5v-3c0-0.83,0.67-1.5,1.5-1.5l0,0c0.83,0,1.5,0.67,1.5,1.5v3C17,14.33,16.33,15,15.5,15z"/>
                 </svg>
-                Context Engineering
+                Agent Skills
               </span>
               <span className={styles.label}>
                 <svg className={styles.labelIcon} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -154,7 +154,7 @@ function HomepageHeader() {
                 <svg className={styles.labelIcon} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M11,17V16H9V14H13V13H10A1,1 0 0,1 9,12V10A1,1 0 0,1 10,9H14V10H12V11H14V12H15V14A1,1 0 0,1 14,15H10V16H13V17H11Z"/>
                 </svg>
-                Workflow
+                Context Engineering
               </span>
             </div>
 
